@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:charts="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             x:Class="Graficas.Views.HomePage"
+             Title="HomePage">
+    <Grid RowDefinitions="Auto,*">
+        <Label Text="Graficas"/>
+        <ScrollView Grid.Row="1">
+            <StackLayout HorizontalOptions="Center">
+                <Frame WidthRequest="300"
+                       BackgroundColor="White"
+                       HeightRequest="300">
+                    <charts:PieChart Series="{Binding Series}"
+                                    Title="{Binding Title}"
+                                    LegendPosition="Right"/>
+
+                </Frame>
+                <Frame WidthRequest="300"
+                       BackgroundColor="White"
+                       HeightRequest="300">
+                    <charts:PieChart Series="{Binding Series}"
+                                    Title="{Binding Title}"
+                                    LegendPosition="Right"/>
+
+                </Frame>
+                <Frame WidthRequest="300"
+                       BackgroundColor="White"
+                       HeightRequest="300">
+                    <charts:PieChart Series="{Binding Series}"
+                                    Title="{Binding Title}"
+                                    LegendPosition="Right"/>
+
+                </Frame>
+                <Frame WidthRequest="300"
+                       BackgroundColor="White"
+                       HeightRequest="300">
+                    <charts:CartesianChart Series="{Binding SeriesPieChar}"
+                                           
+                                           XAxes="{Binding XAxes}"
+                                           YAxes="{Binding YAxes}"
+                                           TooltipPosition="Bottom"/>
+
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
